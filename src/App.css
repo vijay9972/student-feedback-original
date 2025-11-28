@@ -1,0 +1,158 @@
+/* src/App.css */
+
+/* 1. Global Reset for a clean slate */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* Force dark theme colors for consistency */
+  color-scheme: dark; 
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Centers the card vertically and horizontally */
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212; /* Deep dark background */
+  color: #ffffff;
+}
+
+/* 2. The main card container */
+.container {
+  width: 100%;
+  max-width: 420px; /* Slightly narrower for a modern look */
+  margin: 20px;
+  padding: 40px;
+  /* A slightly lighter dark grey for the card */
+  background-color: #1e1e1e; 
+  border-radius: 16px; /* Smoother corners */
+  /* A nice soft shadow to make it pop off the screen */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  border: 1px solid #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* 3. Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Good spacing between inputs */
+}
+
+/* 4. Labels */
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Makes labels look cleaner */
+  letter-spacing: 1px;
+  color: #a0a0a0; /* Muted grey color */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* 5. Inputs, Selects, and Textareas */
+input, select, textarea {
+  width: 100%;
+  padding: 14px 16px;
+  /* Input background darker than card */
+  background-color: #2a2a2a; 
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  /* Smooth transition for the glow effect */
+  transition: all 0.2s ease-in-out; 
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* The "Glow" effect when you click inside an input */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #3b82f6; /* Bright Blue */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue glow */
+  background-color: #303030;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  height: 120px;
+  font-family: inherit;
+}
+
+/* 6. The Submit Button */
+button {
+  margin-top: 10px;
+  padding: 16px;
+  /* A modern blue gradient */
+  background: linear-gradient(135deg, #3b82f6, #2563eb); 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  /* Brighter gradient and shadow on hover */
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+button:active {
+  transform: scale(0.98); /* Subtle click effect */
+}
+
+/* 7. Success Message */
+.status-message {
+  margin-top: 25px;
+  padding: 15px;
+  /* Semi-transparent green background */
+  background-color: rgba(16, 185, 129, 0.15); 
+  color: #34d399; /* Nice bright green text */
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Add to bottom of src/App.css */
+.feedback-list {
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.feedback-card {
+  background-color: #2a2a2a;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.feedback-card strong {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.feedback-card p {
+  color: #ccc;
+  margin: 5px 0 0 0;
+}
